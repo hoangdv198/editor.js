@@ -101,7 +101,10 @@
        * Wrapper of Editor
        */
       holder: 'editorjs',
-
+      /**
+       * if true the inline tool bar dispay on the top of selection
+       */
+      isDisplayInlineToolTop: true,
       /**
        * Common Inline Toolbar settings
        * - if true (or not specified), the order from 'tool' property will be used
@@ -130,12 +133,6 @@
          * Or pass class directly without any configuration
          */
         image: SimpleImage,
-
-        list: {
-          class: NestedList,
-          inlineToolbar: true,
-          shortcut: 'CMD+SHIFT+L'
-        },
 
         checklist: {
           class: Checklist,
@@ -177,11 +174,6 @@
 
         embed: Embed,
 
-        table: {
-          class: Table,
-          inlineToolbar: true,
-          shortcut: 'CMD+ALT+T'
-        },
 
       },
 
