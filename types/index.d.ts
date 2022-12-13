@@ -101,7 +101,6 @@ declare class EditorJS {
   public static version: string;
 
   public isReady: Promise<void>;
-  public isInlineToolTop?: boolean;
   public blocks: Blocks;
   public caret: Caret;
   public sanitizer: Sanitizer;
