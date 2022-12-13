@@ -9,7 +9,7 @@ export interface EditorConfig {
    * @deprecated property will be removed in the next major release, use holder instead
    */
   holderId?: string | HTMLElement;
-
+  isDisplayInlineToolTop?: boolean;
   /**
    * Element where Editor will be appended
    */

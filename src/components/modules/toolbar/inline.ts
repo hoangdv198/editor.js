@@ -167,6 +167,9 @@ export default class InlineToolbar extends Module<InlineToolbarNodes> {
         this.toolbarVerticalMargin,
     };
 
+    if (this.config.isDisplayInlineToolTop) {
+      newCoords.y = selectionRect.y - wrapperOffset.top - this.toolbarVerticalMargin - 40;
+    }
     /**
      * If we know selections width, place InlineToolbar to center
      */
