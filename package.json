@@ -1,7 +1,7 @@
 {
   "name": "@editorjs/editorjs",
   "version": "2.22.2",
-  "description": "Editor.js - 2.22.2 - v0.1 — Fork by Hoangdev",
+  "description": "Editor.js - 2.22.2 - v0.2 — Fork by Hoangdev",
   "main": "dist/editor.js",
   "types": "./types/index.d.ts",
   "keywords": [
@@ -24,7 +24,8 @@
     "svg": "svg-sprite-generate -d src/assets/ -o dist/sprite.svg",
     "pull_tools": "git submodule update --init --recursive",
     "checkout_tools": "git submodule foreach git pull origin master",
-    "test:e2e": "yarn build && cypress run"
+    "test:e2e": "yarn build && cypress run",
+    "prepare": "yarn build"
   },
   "author": "CodeX",
   "license": "Apache-2.0",
