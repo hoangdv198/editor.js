@@ -1,7 +1,7 @@
 {
   "name": "@editorjs/editorjs",
   "version": "2.22.2",
-  "description": "Editor.js - 2.22.2 - v0.3 — Fork by Hoangdev",
+  "description": "Editor.js - 2.22.2 - v0.4 — Fork by Hoangdev",
   "main": "dist/editor.js",
   "types": "./types/index.d.ts",
   "keywords": [
