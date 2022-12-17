@@ -1,5 +1,6 @@
-import $ from '../dom';
 import { InlineTool, SanitizerConfig } from '../../../types';
+import { InlineToolbar } from '../../../types/api';
+import $ from '../dom';
 
 /**
  * Bold Tool
@@ -20,6 +21,10 @@ export default class BoldInlineTool implements InlineTool {
    * Title for hover-tooltip
    */
   public static title = 'Bold';
+  private inlineToolbar: InlineToolbar;
+  constructor({ api }) {
+    this.inlineToolbar = api.inlineToolbar;
+  }
 
   /**
    * Sanitizer Rule
@@ -72,6 +77,11 @@ export default class BoldInlineTool implements InlineTool {
    * @param {Range} range - range to wrap
    */
   public surround(range: Range): void {
+
+    this.inlineToolbar.eventTarget.addEventListener('onInlineToolbarHide', (e) => {
+      console.log('----onInlineToolbarHide bold', e);
+    }, { once: true });
+
     document.execCommand(this.commandName);
   }
 

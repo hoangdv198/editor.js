@@ -229,6 +229,10 @@ export default class InlineToolbar extends Module<InlineToolbarNodes> {
       }
     });
 
+    const event = new Event('onInlineToolbarHide');
+
+    this.Editor.InlineToolbarAPI.eventTarget.dispatchEvent(event);
+
     this.opened = false;
 
     this.flipper.deactivate();

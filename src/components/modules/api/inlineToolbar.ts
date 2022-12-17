@@ -15,6 +15,7 @@ export default class InlineToolbarAPI extends Module {
     return {
       close: (): void => this.close(),
       open: (): void => this.open(),
+      eventTarget: this.eventTarget,
     };
   }
 
@@ -31,4 +32,7 @@ export default class InlineToolbarAPI extends Module {
   public close(): void {
     this.Editor.InlineToolbar.close();
   }
+
+  // eslint-disable-next-line @typescript-eslint/member-ordering
+  public eventTarget = new EventTarget();
 }
